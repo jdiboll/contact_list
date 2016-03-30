@@ -1,10 +1,10 @@
-
+import React from 'react';
 
 
 
 <div class="singleView">
-  		<div class="pictureBlock">
-  			<img src="">
+  		<div className="pictureBlock">
+  			<img src=""/>
   		</div>
   		<ul>
   			<li>icon<span>Name</span></li>

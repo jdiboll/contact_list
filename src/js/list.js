@@ -1,15 +1,19 @@
-    <div class="peeps">
+    import React from 'react';
+
+
+
+    <div className="peeps">
   		<header>My Cronies</header>
-  		<div class="buddy1">
-  			<img src="" >"Name" />
+  		<div className="buddy1">
+  			<img src="" >"Asher" />
   		</div>
-  		<div class="buddy2">
-  			<img src="" >"Name" />
+  		<div className="buddy2">
+  			<img src="" >"Kate" />
   		</div>
-  		<div class="buddy3">
-  			<img src="" >"Name" />
+  		<div className="buddy3">
+  			<img src="" >"Titus" />
   		</div>
-  		<div class="buddy4">
-  			<img src="" >"Name" />
+  		<div className="buddy4">
+  			<img src="" >"Annie" />
   		</div>
     </div>
