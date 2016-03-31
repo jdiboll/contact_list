@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {Component, Proptypes} from 'react';
+
+export default class Contacts extends Component {
+  static Proptypes = {
+    users: React.Proptypes.arrayOf(Proptypes.shape({
+      name: Proptypes.string.isRequired,
+      email: Proptypes.string.isRequired,
+      phone: Proptypes.string.isRequired,
+      location: Proptypes.string.isRequired,
+      photo: Proptypes.string.isRequired,
+        }).isRequired,
+    )
+    contactSelect: Proptypes.func.isRequired
+  }
+}
 
 
-
-<div class="singleView">
-  		<div className="pictureBlock">
-  			<img src=""/>
-  		</div>
-  		<ul>
-  			<li>icon<span>Name</span></li>
-  			<li>icon<span>Email</span></li>
-  			<li>icon<span>phone</span></li>
-  			<li>icon<span>cityState</span></li>
-  		</ul>
-  	</div>
-  </div>
