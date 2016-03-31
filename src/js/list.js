@@ -5,13 +5,13 @@
     <div className="peeps">
   		<header>My Cronies</header>
   		<div className="buddy1">
-  			<img src="" >"Asher" />
+  			<img src="" >"Aaron" />
   		</div>
   		<div className="buddy2">
-  			<img src="" >"Kate" />
+  			<img src="" >"Taylor" />
   		</div>
   		<div className="buddy3">
-  			<img src="" >"Titus" />
+  			<img src="" >"Jason" />
   		</div>
   		<div className="buddy4">
   			<img src="" >"Annie" />

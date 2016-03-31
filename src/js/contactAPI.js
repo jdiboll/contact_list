@@ -1,33 +1,32 @@
-export default contactAPI;
 
 
+let Asher = {
+	photo: 'http:www.american.edu/uploads/profiles/large/streitmatter_profile.jpg',
+	name: "Asher Riley",
+	email: 'quietguy1@yahoo.com',
+	phone: "404-345-7652",
+	location: 'Smuteye, AL'
+}
+let John = {
+	photo: 'http:www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg',
+	name: 'John Strycula',
+	email: 'cantStop23@gmail.com',
+	phone: '555-555-6969',
+	location: 'Pine Level, AL'
+}
+let Annie = {
+	photo: 'https://s-media-cache-ak0.pinimg.com/236x/66/02/51/6602515fb6fac48db424c8da36e2dc84.jpg',
+	name: 'Annie York',
+	email: 'gurlsrull341@knology.net',
+	phone: '456-987-0071',
+	location: 'Red Level, AL'
+}
+let Taylor = {
+	photo: 'http://mrpopat.in/admin/upload/wallpaper/2013122413878633131923598985.jpg',
+	name: 'Taylor Manning',
+	email: '2faced63@gmail.com',
+	phone: '456-789-1138',
+	location: 'Diboll, TX'
+};
 
-contacts= [{
-	picture:"https:randomuser.me/img/creator_arron.png",
-	name:"Aaron Tate",
-	email: "GoneGit1880@gmail.com",
-	phone: "555-0398",
-	location: "Atlanta, GA",
-}]
-[{
-	picture:"http://api.randomuser.me/portraits/thumb/women/39.jpg",
-	name: "Taylor Manning",
-	email: "nowInoy4545@gmail.com",
-	phone: "555-9083",
-	location: "Montgomery, AL",
-}]
-[{
-	picture:https:"scontent-atl3-1.xx.fbcdn.net/hphotos-xfa1/t31.0-8/209805_553186978054_61109_o.jpg",
-	name: "Jason Huffman",
-	email:"whiskeydog1112@hotmail.com",
-	phone: "555-1908",
-	location: "Atlanta, GA",
-}]
-[{
-	picture:https:"scontent-atl3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-0/p206x206/1622756_10153883956245313_480024608_n.jpg?oh=98c0837c2451ebb6d41485e15d5c62ae&oe=57905E49",
-	name: "Anne York",
-	email:"gurlsrewl23@knology.net",
-	phone:"555-5278",
-	location: "Huber Heights, OH",
-
-}]
+export default [Asher, John, Annie, Taylor];
