@@ -15,18 +15,31 @@ export default class Contacts extends Component {
     let contactSelect = this.props
     let clickHandler = () => onContactSelect(user)
     return (
-      <div className="contactList">
-        <h3>My Cronies</h3>
-          <ul>{user.map(::this.contactSelect)}</ul>
-        <li>{user.name} onClick={clickHandler}>{user.name}</li>)
-      </div>
+      <li>onClick = {contactSelect.bind(0,user)}>{user.name}</li>
+      //<div className="contactList">
+        //<h3>My Cronies</h3>
+          //<ul>{user.map(::this.contactSelect)}</ul>
+        //<li>{user.name} onClick={clickHandler}>{user.name}</li>)
+      //</div>
 
       )
   }
+
+  foo() {
+  return "Joshie";
+}
+  render() {
+    return (
+    <div className="contactList">
+        <h3>My Cronies</h3>
+          <ul>{user.map(::this.contactSelect)}</ul>
+        <li>{user.name} onClick={clickHandler}>{user.name}</li>
+      </div>
+      )
+}
 
 
 };
           //<ul>
             //<li>{user.name}</li>
           //</ul>
-
