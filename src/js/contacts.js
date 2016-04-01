@@ -11,14 +11,14 @@ export default class Contacts extends Component {
     }).isRequired),
     contactSelect: PropTypes.func.isRequired
   }
-  ///click function
-  render () {
+  getContact(user) {
+    let contactSelect = this.props
+    let clickHandler = () => onContactSelect(user)
     return (
       <div className="contactList">
         <h3>My Cronies</h3>
-          <ul>
-            <li>{user.name}</li>
-          </ul>
+          <ul>{user.map(::this.contactSelect)}</ul>
+        <li>{user.name} onClick={clickHandler}>{user.name}</li>)
       </div>
 
       )
@@ -26,5 +26,7 @@ export default class Contacts extends Component {
 
 
 };
-
+          //<ul>
+            //<li>{user.name}</li>
+          //</ul>
 
