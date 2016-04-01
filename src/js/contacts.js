@@ -1,17 +1,30 @@
-import React, {Component, Proptypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 export default class Contacts extends Component {
-  static Proptypes = {
-    users: React.Proptypes.arrayOf(Proptypes.shape({
-      name: Proptypes.string.isRequired,
-      email: Proptypes.string.isRequired,
-      phone: Proptypes.string.isRequired,
-      location: Proptypes.string.isRequired,
-      photo: Proptypes.string.isRequired,
-        }).isRequired,
-    )
-    contactSelect: Proptypes.func.isRequired
+  static PropTypes = {
+    users: React.PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      photo: PropTypes.string.isRequired,
+    }).isRequired),
+    contactSelect: PropTypes.func.isRequired
   }
-}
+  ///click function
+  render () {
+    return (
+      <div className="contactList">
+        <h3>My Cronies</h3>
+          <ul>
+            <li>{user.name}</li>
+          </ul>
+      </div>
+
+      )
+  }
+
+
+};
 
 

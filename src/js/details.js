@@ -1,16 +1,17 @@
-    import React, {Component, Proptypes} from 'react';
+import React, {Component, PropTypes} from 'react';
+import contactAPI from './contactAPI';
 
 
 export default class details extends Component {
-  static Proptypes = {
-     user: Proptypes.shape({
-      name: Proptypes.string.isRequired,
-      email: Proptypes.string.isRequired,
-      phone: Proptypes.string.isRequired,
-      location: Proptypes.string.isRequired,
-      photo: Proptypes.string.isRequired,
+  static PropTypes = {
+     user: React.PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      photo: PropTypes.string.isRequired,
     }).isRequired,
-    goBack:Proptypes.func.isRequired
+    goBack:PropTypes.func.isRequired
   }
 
   render () {
@@ -19,8 +20,12 @@ export default class details extends Component {
         <div className="heading">
           <button onClick={this.props.goBack}></button>
           <img src={user.photo} alt={user.name}/>
-        </div>
+       </div>
       </div>
      )
   }
-}
+};
+
+
+
+
