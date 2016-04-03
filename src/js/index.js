@@ -3,7 +3,7 @@ import React, {Component, Proptypes} from 'react';
 import ReactDOM from 'react-dom';
 import contactAPI from './contactAPI';
 import Contacts from './contacts';
-import contactSpecs from './details';
+import ContactSpecs from './details';
 
 //let Asher = {
 	//photo: 'http:www.american.edu/uploads/profiles/large/streitmatter_profile.jpg',
@@ -19,18 +19,21 @@ import contactSpecs from './details';
 
 
 //check this!!!
-function showDetails() {
+let showDetails = (user) => {
 ReactDOM.render (
-		<contactSpecs user={user.name} goBack={user.list}/>,
+		<ContactSpecs specs={user} goBack={showContacts}/>,
 		document.querySelector('.app'))
 }
 
-function showContacts () {
+let showContacts = () => {
 	ReactDOM.render (
-		<Contacts user={user.name} getContact={showDetails}/>,
+		<Contacts users={contactAPI} contactSelect={showDetails}/>,
 		document.querySelector('.app'))
 }
 
-showContacts();
+ showContacts();
 //let contactList = ReactDOM.render (
 	//, document.querySelector('.app'))
+
+
+//showDetails({name:'ben', email: "bbb", phone: 'hey', location: 'boop', photo: 'woah'})
