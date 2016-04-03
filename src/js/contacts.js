@@ -30,7 +30,7 @@ export default class Contacts extends Component {
   render() {
     return (
     <div className="contactList">
-        <h3>My Cronies</h3>
+        <h1>My Cronies</h1>
           <ul>
           {this.props.users.map(::this.getContact)}
           </ul>
