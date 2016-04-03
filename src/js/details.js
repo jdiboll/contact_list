@@ -19,7 +19,7 @@ export default class contactSpecs extends Component {
     return (
       <div className= "contact-details">
         <div className="heading">
-          <button onClick={this.props.goBack}></button>
+          <button onClick={this.props.goBack}><i className="fa fa-arrow-circle-left fa-2x"/></button>
           <img src={this.props.specs.photo} alt={this.props.specs.name}/>
        </div>
        <ul className="detailList">

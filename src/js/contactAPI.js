@@ -1,14 +1,14 @@
 
 
 let Asher = {
-	photo: 'http:www.american.edu/uploads/profiles/large/streitmatter_profile.jpg',
+	photo: 'http://graphics8.nytimes.com/images/2014/03/19/technology/19bits-gaming/19bits-gaming-articleInline.jpg',
 	name: "Asher Riley",
 	email: 'quietguy1@yahoo.com',
 	phone: "404-345-7652",
 	location: 'Smuteye, AL'
 }
 let John = {
-	photo: 'http:www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg',
+	photo: 'https://lh3.googleusercontent.com/-fFt6UIgyUQ8/AAAAAAAAAAI/AAAAAAAAS2Y/XZn_zLI8K6I/photo.jpg',
 	name: 'John Strycula',
 	email: 'cantStop23@gmail.com',
 	phone: '555-555-6969',
@@ -22,7 +22,7 @@ let Annie = {
 	location: 'Red Level, AL'
 }
 let Taylor = {
-	photo: 'http://mrpopat.in/admin/upload/wallpaper/2013122413878633131923598985.jpg',
+	photo: 'https://upload.wikimedia.org/wikipedia/en/7/7b/Sally_Obermeder_Profile_Image.jpg',
 	name: 'Taylor Manning',
 	email: '2faced63@gmail.com',
 	phone: '456-789-1138',
