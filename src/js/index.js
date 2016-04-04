@@ -28,17 +28,17 @@ ReactDOM.render (
 
 let showContacts = () => {
 	ReactDOM.render (
-		<Contacts users={contactAPI} contactSelect={showDetails}/>,
+		<Contacts users={contactAPI} contactSelect={showDetails} onAdd={renderNewForm}/>,
 		document.querySelector('.app'))
 } 
 
 function addItemAndRender (newform) {
-	NewContact.push(newform);
+	contactAPI.push(newform);
 	showContacts();
 }
 
 function renderNewForm() {
-	render (
+	ReactDOM.render (
 		<NewContact onAdd={addItemAndRender}/>
 		,document.querySelector('.app'))
 }

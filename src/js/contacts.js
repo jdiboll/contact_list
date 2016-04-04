@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
+
 export default class Contacts extends Component {
   static propTypes = {
     users: React.PropTypes.array,
@@ -11,14 +12,14 @@ export default class Contacts extends Component {
     //   photo: PropTypes.string.isRequired,
     // }).isRequired),
     contactSelect: PropTypes.func.isRequired,
-    onNew: PropTypes.func.isRequired
+    onAdd: PropTypes.func.isRequired
     //add to button, add to render in indexjs
   }
   getContact(user) {
     let {contactSelect} = this.props
     // let clickHandler = () => onContactSelect(user)
     return (
-      <li onClick = {contactSelect.bind(0,user)}>
+      <li key={user.name} onClick = {contactSelect.bind(0,user)}>
       {user.name}
       </li>
       //<div className="contactList">
@@ -30,9 +31,10 @@ export default class Contacts extends Component {
       )
   }
   render() {
+    let { onAdd } = this.props;
     return (
     <div className="contactList">
-    <button>Add a Crony</button>
+    <button onClick={onAdd}>Add a Crony</button>
         <h1>My Cronies</h1>
           <ul>
           {this.props.users.map(::this.getContact)}

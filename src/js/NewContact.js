@@ -17,32 +17,32 @@ render () {
 				<SSF onData={::this.dataHandler}>
 					<div>
 						<label>
-						Title: Name
-						<input type="text" title="name"/>
+						 Name:
+						<input type="text" name="name"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: Email
-						<input type="text" title="email"/>
+						 Email:
+						<input type="text" name="email"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: Phone
-						<input type="tel" title="phone"/>
+						 Phone:
+						<input type="tel" name="phone"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: Location
-						<input type="text" title="location"/>
+						 Location:
+						<input type="text" name="location"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: Photo URL
-						<input type="url" title="photo"/>
+						 Photo URL:
+						<input type="url" name="photo"/>
 						</label>
 					</div>
 					<button>Submit</button>
