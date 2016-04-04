@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import contactAPI from './contactAPI';
 import Contacts from './contacts';
 import ContactSpecs from './details';
+import NewContact from './NewContact';
 
 //let Asher = {
 	//photo: 'http:www.american.edu/uploads/profiles/large/streitmatter_profile.jpg',
@@ -29,6 +30,17 @@ let showContacts = () => {
 	ReactDOM.render (
 		<Contacts users={contactAPI} contactSelect={showDetails}/>,
 		document.querySelector('.app'))
+} 
+
+function addItemAndRender (newform) {
+	NewContact.push(newform);
+	showContacts();
+}
+
+function renderNewForm() {
+	render (
+		<NewContact onAdd={addItemAndRender}/>
+		,document.querySelector('.app'))
 }
 
  showContacts();

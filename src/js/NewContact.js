@@ -1,8 +1,8 @@
-import React, { Component, Proptypes} from 'react';
+import React, { Component, PropTypes} from 'react';
 import SSF from 'react-simple-serial-form';
 
 export default class NewContact extends Component {
-	static Proptypes {
+	static propTypes = {
 		onAdd: PropTypes.func.isRequired
 	}
 	dataHandler(formData) {
@@ -10,42 +10,42 @@ export default class NewContact extends Component {
 	}
 
 
-render {
+render () {
 	return (
 		<div className="formView">
 			<h1>Add a Crony</h1>
-				<SSF onData={this.dataHandler}>
+				<SSF onData={::this.dataHandler}>
 					<div>
 						<label>
-						Title: "name"
-						input type="text" title="Name">
+						Title: Name
+						<input type="text" title="name"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: "Email"
-						input type="text" title="Email">
+						Title: Email
+						<input type="text" title="email"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: "phone"
-						input type="tel" title="Phone">
+						Title: Phone
+						<input type="tel" title="phone"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: "location"
-						input type="text" title="Location">
+						Title: Location
+						<input type="text" title="location"/>
 						</label>
 					</div>
 					<div>
 						<label>
-						Title: "photo URL"
-						input type="text" title="url">
+						Title: Photo URL
+						<input type="url" title="photo"/>
 						</label>
 					</div>
-					<button>Add New Contact</button>
+					<button>Submit</button>
 				</SSF>
 		</div>
 
@@ -53,5 +53,4 @@ render {
 
 		)
 	}
-
 }

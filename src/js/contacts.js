@@ -10,7 +10,9 @@ export default class Contacts extends Component {
     //   location: PropTypes.string.isRequired,
     //   photo: PropTypes.string.isRequired,
     // }).isRequired),
-    contactSelect: PropTypes.func.isRequired
+    contactSelect: PropTypes.func.isRequired,
+    onNew: PropTypes.func.isRequired
+    //add to button, add to render in indexjs
   }
   getContact(user) {
     let {contactSelect} = this.props
@@ -30,6 +32,7 @@ export default class Contacts extends Component {
   render() {
     return (
     <div className="contactList">
+    <button>Add a Crony</button>
         <h1>My Cronies</h1>
           <ul>
           {this.props.users.map(::this.getContact)}
