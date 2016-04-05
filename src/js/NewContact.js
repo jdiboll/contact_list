@@ -10,14 +10,14 @@ export default class NewContact extends Component {
 	constructor () {
 		super ();
 		this.state = {
-			preview: 'http://www.sheffield.com/wp-content/uploads/2013/06/placeholder.png'
+			preview: 'https://www.youthcorps.sg/ContentImages/image_placeholder.png'
 		}
 	}
 
 	dataHandler(formData) {
 		this.props.onAdd(formData);
 	}
-	dropHandler({file}) {
+	dropHandler([file]) {
 		console.log(file);
 		this.setState({preview: file.preview});
 	}
@@ -55,8 +55,9 @@ render () {
 					</div>
 					<div>
 						<Dropzone onDrop={::this.dropHandler}>
-						Add Your Photo Here
-						<img src={this.state.preview} width="280"/>
+							Add Your Photo Here
+							<img src={this.state.preview} width="50px" height="50px"/>
+							<input type="hidden" value={this.state.preview} name="photo"/>
 						</Dropzone>
 					</div>
 					<button>Submit</button>

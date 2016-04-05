@@ -33,6 +33,7 @@ let showContacts = () => {
 } 
 
 function addItemAndRender (newform) {
+	console.log(newform);
 	contactAPI.push(newform);
 	showContacts();
 }
