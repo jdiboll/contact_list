@@ -53,10 +53,10 @@ render () {
 						<input type="text" name="location"/>
 						</label>
 					</div>
-					<div>
+					<div className="photoBox">
 						<Dropzone onDrop={::this.dropHandler}>
-							Add Your Photo Here
-							<img src={this.state.preview} width="50px" height="50px"/>
+							Add Your Photo Here:
+							<img src={this.state.preview} width="70px" height="70px"/>
 							<input type="hidden" value={this.state.preview} name="photo"/>
 						</Dropzone>
 					</div>
