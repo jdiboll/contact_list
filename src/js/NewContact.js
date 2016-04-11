@@ -15,12 +15,15 @@ export default class NewContact extends Component {
 	}
 
 	dataHandler(formData) {
+		//data.file = this.file;
 		this.props.onAdd(formData);
 	}
 	dropHandler([file]) {
 		console.log(file);
 		this.setState({preview: file.preview});
+		//this.file = file;
 	}
+
 
 
 

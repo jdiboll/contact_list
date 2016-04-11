@@ -34,7 +34,7 @@ let showContacts = () => {
 
 function addItemAndRender (newform) {
 	console.log(newform);
-	contactAPI.push(newform);
+	contactAPI.push(newform);//<---no more push, put in loading screen, then insert ajax list .then renderNewForm
 	showContacts();
 }
 
