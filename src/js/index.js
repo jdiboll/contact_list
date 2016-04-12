@@ -35,6 +35,9 @@ render ((
 	</Router>
 	), document.querySelector('.app'));
 
+			//<Route path="/details/:user_name" component={ContactSpecs}/>
+
+
 //check this!!!
 // let showDetails = (user) => {
 // ReactDOM.render (

@@ -1,26 +1,66 @@
 //* CSS Entry Point */
  @import 'font-awesome';
 
+
+body {
+	margin: 0;
+}
+
  .app {
  	//height: 400px;
- 	max-width: auto;
+ 	//max-width: auto;
  	font-family: 'Gloria Hallelujah', cursive;
+ 	//display: flex;
+ 	//justify-content: flex-start;
+ 	//float: right;
+ }
+ .layout-wrapper {
+ 	//display: inline;
+ }
+ nav {
+ 	//float: left;
+ 	height: 100%;
+ 	width: 280px;
+ 	background-color: #c7d4e5;
+ 	border-radius: 5px;
+ 	padding: 12px;
+ 	margin-top: 10px;
+ 	margin-right: 0;
+ 	margin-bottom: 10px;
+ 	display: inline-block;
+ }
+ footer {
+ 	width: 100%;
+ 	text-align: center;
+ 	float: bottom;
  }
  .contactList {
  	width: 350px;
+ 	border-radius: 5px;
+ 	float: right;
+ 	//float: top;
+ 	//border-radius: 5px;
+ 	margin-right: 50px;
+ 	margin-top: 10px;
+ 	text-decoration: none;
  	//display: flex;
  }
  .contactList button {
  	border-radius: 3px;
  	color: #a6ce75;
  	width: 80px;
- 	border: 2px solid #a6ce75;
+ 	border: 2px solid #3b6da8;
  	background-color: white;
  	margin: 10px;
  	//justify-content: flex-start;
  }
  .contact-details {
  	width: 400px;
+ 	margin-right: 50px;
+ 	float: right;
+ 	margin-top: 10px;
+ 	//float: top;
+ 	border-radius: 5px;
  }
  .contact-details ul {
  	width: 357px;
@@ -37,14 +77,14 @@
  button {
  	width: 43px;
  	height: 34px;
- 	background-color: #a6ce75;
+ 	background-color: #3b6da8;
  	border:1px solid black;
- 	border-radius: 3px;
+ 	border-radius: 5px;
  	border-style: none;
 
  }
  .heading {
- 	background-color: #a6ce75;
+ 	background-color: #3b6da8;
  }
  i {
  	padding-right: 10px;
@@ -62,14 +102,18 @@
  }
  h1 {
  	padding-left: 20px;
- 	background-color: #a6ce75;
+ 	background-color: #3b6da8;
  	color: white;
  	margin: 0;
  }
  .formView {
  	width: 415px;
  	border: 1px solid #ccc;
- 	border-radius: 3px;
+ 	border-radius: 5px;
+ 	float: right;
+ 	//float: top;
+ 	margin-right: 50px;
+ 	margin-top: 10px;
  	//display: flex;
  }
 .formView label {
@@ -88,10 +132,10 @@
 	padding-left: 12px;
 }
 .formView button {
-	border-radius: 3px;
- 	color: #a6ce75;
+	border-radius: 5px;
+ 	color: #3b6da8;
  	width: 80px;
- 	border: 2px solid #a6ce75;
+ 	border: 2px solid #3b6da8;
  	background-color: white;
  	margin: 10px;
 }

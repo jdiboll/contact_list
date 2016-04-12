@@ -37,7 +37,6 @@ export default class Contacts extends Component {
     //let { onAdd } = this.props;
     return (
     <div className="contactList">
-    <Link to="/NewContact">Add a Crony</Link>
         <h1>My Cronies</h1>
           <ul>
           {users.map(::this.getContact)}
@@ -48,6 +47,7 @@ export default class Contacts extends Component {
 
 
 };
+  //<Link to="/NewContact">Add a Crony</Link>
           //<ul>
             //<li>{user.name}</li>
           //</ul>
