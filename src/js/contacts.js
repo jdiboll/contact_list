@@ -19,11 +19,11 @@ export default class Contacts extends Component {
   //}
  getContact(user) {
     ////let {contactSelect} = this.props
-     let clickHandler = () => onContactSelect(user)
+     //let clickHandler = () => onContactSelect(user)
     return (
-      <Link to="/details"><li key={user.name}>
-      {user.name}
-      </li></Link>
+      <li key={user.name}>
+      <Link to={`/details/${user.name}`}>{user.name}></Link></li>
+      //console.log(user);
       //<div className="contactList">
         //<h3>My Cronies</h3>
           //<ul>{user.map(::this.contactSelect)}</ul>

@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import contactAPI from './contactAPI';
+import users from './contactAPI';
 import Contacts from './contacts';
 import { Link } from 'react-router';
 
@@ -17,18 +17,22 @@ export default class contactSpecs extends Component {
   //}
 
   render () {
-    //console.log(this.props.specs)
+    //console.log(user_name, this.props.params.user_name)
+    //console.log(users)
+    let {user_name} = this.props.params;
+    let user = users.find(currentUser => currentUser.name === user_name);
+    // let user = userArr.pop()
     return (
       <div className= "contact-details">
         <div className="heading">
           <Link to="/"><button><i className="fa fa-arrow-circle-left fa-2x"/></button></Link>
-          <img src="{contactAPI[0].photo}" alt="{contactAPI[0].name}"/>
+          <img src={user.photo} alt={user.name}/>
        </div>
        <ul className="detailList">
-        <li><i className="fa fa-user"/>{contactAPI[0].name}</li>
-        <li><i className="fa fa-envelope"/>{contactAPI[0].email}</li>
-        <li><i className="fa fa-mobile"/>{contactAPI[0].phone}</li>
-        <li><i className="fa fa-globe"/>{contactAPI[0].location}</li>
+        <li><i className="fa fa-user"/>{user.name}</li>
+        <li><i className="fa fa-envelope"/>{user.email}</li>
+        <li><i className="fa fa-mobile"/>{user.phone}</li>
+        <li><i className="fa fa-globe"/>{user.location}</li>
         </ul>
       </div>
      )

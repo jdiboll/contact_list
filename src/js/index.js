@@ -1,7 +1,7 @@
 // Javascript Entry Point
 import React, {Component, Proptypes} from 'react';
 import { render } from 'react-dom';
-import contactAPI from './contactAPI';
+import users from './contactAPI';
 import Contacts from './contacts';
 import ContactSpecs from './details';
 import NewContact from './NewContact';
@@ -28,7 +28,7 @@ render ((
 	<Router history = {hashHistory}>
 	<Route path="/" component={Contacts}/>
 	<Route path="/NewContact" component={NewContact}/>
-	<Route path="/details" component={ContactSpecs}/>
+	<Route path="/details/:user_name" component={ContactSpecs}/>
 	</Router>
 	), document.querySelector('.app'));
 
