@@ -6,7 +6,8 @@ import Contacts from './contacts';
 import ContactSpecs from './details';
 import NewContact from './NewContact';
 import cookie from 'js-cookie';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, Indexroute } from 'react-router';
+import Layout from './Layout';
 
 // function activeUser () {
 // 	return !!cookie.get("user.name");
