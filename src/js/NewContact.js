@@ -1,10 +1,15 @@
 import React, { Component, PropTypes} from 'react';
 import SSF from 'react-simple-serial-form';
 import Dropzone from 'react-dropzone';
+import { hashHistory, Link } from 'react-router';
+import contactAPI from './contactAPI';
+import Contacts from './contacts';
+
+
 
 export default class NewContact extends Component {
 	static propTypes = {
-		onAdd: PropTypes.func.isRequired
+		//onAdd: PropTypes.func.isRequired
 	}
 
 	constructor () {
@@ -15,13 +20,16 @@ export default class NewContact extends Component {
 	}
 
 	dataHandler(formData) {
-		//data.file = this.file;
-		this.props.onAdd(formData);
+		data.file = this.file;
+		//this.props.onAdd(formData);
+		contactAPI.push(formData.file)
+		hashHistory.push('/')
+
 	}
 	dropHandler([file]) {
-		console.log(file);
+		//console.log(file);
 		this.setState({preview: file.preview});
-		//this.file = file;
+		this.file = file;
 	}
 
 
