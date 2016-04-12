@@ -1,16 +1,18 @@
 import React, {Component, PropTypes} from 'react';
 import contactAPI from './contactAPI';
+import Contacts from './contacts';
+import { Link } from 'react-router';
 
 
 export default class contactSpecs extends Component {
   static propTypes = {
-     specs: React.PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      email: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
-      location: PropTypes.string.isRequired,
-      photo: PropTypes.string.isRequired,
-    }).isRequired,
+     //specs: React.PropTypes.shape({
+      //name: PropTypes.string.isRequired,
+      //email: PropTypes.string.isRequired,
+      //phone: PropTypes.string.isRequired,
+      //location: PropTypes.string.isRequired,
+      //photo: PropTypes.string.isRequired,
+    //}).isRequired,
     goBack:PropTypes.func.isRequired
   }
 
