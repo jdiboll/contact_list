@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import { Link } from 'react-router';
+import users from './contactAPI';
 
 
 export default class Contacts extends Component {
-  static propTypes = {
-    users: React.PropTypes.array,
+  //static propTypes = {
+    //users: React.PropTypes.array,
     //Of(PropTypes.shape({
     //   name: PropTypes.string.isRequired,
     //   email: PropTypes.string.isRequired,
@@ -12,22 +13,22 @@ export default class Contacts extends Component {
     //   location: PropTypes.string.isRequired,
     //   photo: PropTypes.string.isRequired,
     // }).isRequired),
-    contactSelect: PropTypes.func.isRequired
+    //contactSelect: PropTypes.func.isRequired,
     //onAdd: PropTypes.func.isRequired
     //add to button, add to render in indexjs
-  }
-  getContact(user) {
-    let {contactSelect} = this.props
+  //}
+ getContact(user) {
+    ////let {contactSelect} = this.props
      let clickHandler = () => onContactSelect(user)
     return (
-      <li key={user.name} onClick = {contactSelect.bind(0,user)}>
+      <Link to="/details"><li key={user.name}>
       {user.name}
-      </li>
-      // <div className="contactList">
-        // <h3>My Cronies</h3>
-          // <ul>{user.map(::this.contactSelect)}</ul>
-        // <li>{user.name} onClick={clickHandler}>{user.name}</li>)
-      // </div>
+      </li></Link>
+      //<div className="contactList">
+        //<h3>My Cronies</h3>
+          //<ul>{user.map(::this.contactSelect)}</ul>
+        //<li>{user.name} onClick={clickHandler}>{user.name}</li>)
+      //</div>
 
       )
   }
@@ -39,7 +40,7 @@ export default class Contacts extends Component {
     <Link to="/NewContact">Add a Crony</Link>
         <h1>My Cronies</h1>
           <ul>
-          {this.props.users.map(::this.getContact)}
+          {users.map(::this.getContact)}
           </ul>
       </div>
       )

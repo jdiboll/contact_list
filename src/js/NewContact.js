@@ -8,9 +8,9 @@ import Contacts from './contacts';
 
 
 export default class NewContact extends Component {
-	static propTypes = {
+	//static propTypes = {
 		//onAdd: PropTypes.func.isRequired
-	}
+	//}
 
 	constructor () {
 		super ();
