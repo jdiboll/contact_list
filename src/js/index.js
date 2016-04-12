@@ -6,7 +6,7 @@ import Contacts from './contacts';
 import ContactSpecs from './details';
 import NewContact from './NewContact';
 import cookie from 'js-cookie';
-import { Router, Route, hashHistory, Indexroute } from 'react-router';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import Layout from './Layout';
 
 // function activeUser () {
@@ -27,9 +27,11 @@ import Layout from './Layout';
 
 render ((
 	<Router history = {hashHistory}>
-	<Route path="/" component={Contacts}/>
-	<Route path="/NewContact" component={NewContact}/>
-	<Route path="/details/:user_name" component={ContactSpecs}/>
+		<Route path="/" component={Layout}>
+			<IndexRoute component={Contacts}/>
+			<Route path="/NewContact" component={NewContact}/>
+			<Route path="/details/:user_name" component={ContactSpecs}/>
+		</Route>
 	</Router>
 	), document.querySelector('.app'));
 
